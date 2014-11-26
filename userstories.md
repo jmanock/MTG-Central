@@ -1,88 +1,92 @@
 
 ## MVP
 =========
-#### I can select my state so that I can view only cities in my state (5)
 
----- 
-
-#### I can select my city from a list so that I can only view posts in that city (1)
+#### Anyone can sign up using Facebook so that they can create a post (8)
+* Users may only have one post
+* Only authenticated users can create / edit their own post
 
 ----
- 
-#### I can create a post so that I can display the cards I have / want (8)
-* I can add a title
-* I can add a description
-* I can add a name
-* I can add the shop location that I frequent
-* I can add an email
+
+#### Anyone can create a post so that they can display the cards they have / want (8)
+* Can add a title
+* Can add a description
+* Can add a name
+* Can add the shop location that they frequent
+* Can add an email
 
 ---- 
 
-#### I can type in a card name so I can find the card I'm looking for (8)
+#### Anyone can type in a card name so they can find the card they're looking for (8)
 * Autocomplete functionality
 * Minimal user interaction
 
 ----
 
-#### I can click a card in the search field to add it to my list (13)
+#### Anyone can click a card in the search field to add it to their list (13)
 * Create a new list item 
 * Drop down for quanity 
 * Non editable text field
-* Delete button
 
 ----
 
-#### I can change the quantity of the card so that I can trade multiples (1)
+#### Anyone can delete a card from their list so that they can remove cards they accidentally added (3)
+* Delete individual items rather than whole list
+* Can't edit the card text
+* Can update quantity or delete
+
+---- 
+
+#### Anyone can edit their post so that they can update card quantity and delete cards (8)
+* After a post has been submitted, can still be changed
+* Add new cards
+* Remove cards
+* Change quantity
+
+---- 
+
+#### Anyone can add non-card items so that they can display gaming accessories / random supplies (3)
+* Seperate input for non-card items
+* Open text-area (not validated)
+---- 
+
+#### Anyone can view other posts so that they can see others' have / wants (3)
+* Displayed on one page
+* Ascending order based on recently updated
 
 ----
 
-#### I can delete a card from my list so that I can remove cards I accidentally added (3)
-
+#### Anyone can filter posts by state so that they can view local posts (5)
+* Select their state on map
+* List of cities will display
+* Select city within the state
 ---- 
 
-#### I can add cards I want to my post so that I can tell others what cards I want (1)
-
----- 
-
-#### I can edit my post so that I can update card quantity and delete cards(8)
-
----- 
-
-#### I can add non-card items so that I can display gaming accessories / random supplies (3)
-
----- 
-
-#### I can view other posts so that I can see others' have / wants (3)
-
-----
- 
-#### I can search for cards in each post so that I can only view posts with a certain card (5)
+#### Anyone can search for cards in each post so that they can view posts that only contain that card (5)
+* Autocomplete functionality
+* Search will only show posts that have that card
 
 ========
 ## Stretch Goals
 ========
 
-#### I can authenticate a user's post via email so that users can access their post via email
+#### Anyone can authenticate a user's post via email so that users can access their post via email
 
 ----
 
-#### I can authenticate via social networks so that only users can access their content
-
-----
-
-#### I can chat with other users to arrange a trade
+#### Anyone can chat with other users to arrange a trade
 
 ---- 
 
-#### I can look up the price of cards so that I can compare values of a trade
+#### Anyone can look up the price of cards so that they can compare values of a trade
 
 ---- 
 
-#### I can keep track of my trade history so that I remember to update my haves / wants
+#### Anyone can keep track of their trade history so that they remember to update my haves / wants
 
 ---- 
 
-#### I can add feedback for users to allow them to avoid bad traders
+#### Anyone can add feedback for users to allow them to avoid bad traders
 
 
 
