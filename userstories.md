@@ -47,6 +47,7 @@
 #### Anyone can add non-card items so that they can display gaming accessories / random supplies (3)
 * Seperate input for non-card items
 * Open text-area (not validated)
+
 ---- 
 
 #### Anyone can view other posts so that they can see others' have / wants (3)
@@ -59,6 +60,7 @@
 * Select their state on map
 * List of cities will display
 * Select city within the state
+
 ---- 
 
 #### Anyone can search for cards in each post so that they can view posts that only contain that card (5)
