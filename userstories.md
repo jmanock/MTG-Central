@@ -27,7 +27,7 @@
 
 ---- 
 
-#### I can add cards I want to my post (20)
+#### I can add cards I want to my post (1 - After haves are done)
 * I can search for cards with autocomplete functionality
 * I can click a card in the search field to add it to my list
 * I can change the quantity of the card (default 1)
