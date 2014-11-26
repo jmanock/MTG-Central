@@ -19,11 +19,24 @@
 
 ---- 
 
-#### I can add cards I have to my post (20)
-* I can search for cards with autocomplete functionality
-* I can click a card in the search field to add it to my list
-* I can change the quantity of the card (default 1)
-* I can delete a card if I accidentally added it
+#### I can search for cards with autocomplete functionality (8)
+* I can type a card name
+
+----
+
+#### I can click a card in the search field to add it to my list (13)
+* Create a new list item 
+* Drop down for quanity 
+* Non editable text field
+* Delete button
+
+----
+
+#### I can change the quantity of the card (default 1) (1)
+
+----
+
+#### I can delete a card if I accidentally added it (3)
 
 ---- 
 
