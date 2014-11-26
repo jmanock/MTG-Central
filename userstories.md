@@ -1,16 +1,15 @@
 
 ## MVP
 =========
-#### I can select my state (5)
-* I can click on my state on a map
+#### I can select my state so that I can view only cities in my state (5)
 
 ---- 
 
-#### I can select my city from a list of cities (1)
+#### I can select my city from a list to only view posts in that city (1)
 
 ----
  
-#### I can create a post (8)
+#### I can create a post so that I can display the cards I have / want (8)
 * I can add a title
 * I can add a description
 * I can add a name
@@ -19,8 +18,9 @@
 
 ---- 
 
-#### I can search for cards with autocomplete functionality (8)
-* I can type a card name
+#### I can type in a card name so I can find the card I'm looking for (8)
+* Autocomplete functionality
+* Minimal user interaction
 
 ----
 
@@ -32,66 +32,57 @@
 
 ----
 
-#### I can change the quantity of the card (default 1) (1)
+#### I can change the quantity of the card so that I can trade multiples (1)
 
 ----
 
-#### I can delete a card if I accidentally added it (3)
+#### I can delete a card from my list so that I can remove cards I accidentally added (3)
 
 ---- 
 
-#### I can add cards I want to my post (1 - After haves are done)
-* I can search for cards with autocomplete functionality
-* I can click a card in the search field to add it to my list
-* I can change the quantity of the card (default 1)
-*  I can delete a card if I accidentally added it
+#### I can add cards I want to my post so that I can tell others what cards I want (1)
 
 ---- 
 
-#### I can edit my post (8)
-* I can delete cards
-* I can update card quantity
+#### I can edit my post so that I can update card quantity and delete cards(8)
 
 ---- 
 
-#### I can add non-card items (misc. section) (3)
-* I can add random supplies / gaming accessories via text-area
+#### I can add non-card items so that I can display gaming accessories / random supplies (3)
 
 ---- 
 
-#### I can view other posts (3)
-* I can view by most recently updated in descending order
+#### I can view other posts so that I can see others' have / wants (3)
 
 ----
  
-#### I can search for cards in each post (5)
-* I can search by card name based on haves or wants
+#### I can search for cards in each post so that I can only view posts with a certain card (5)
 
 ========
 ## Stretch Goals
 ========
 
-#### I can authenticate a user's post via email
+#### I can authenticate a user's post via email so that users can access their post via email
 
 ----
 
-#### I can authenticate via social networks
+#### I can authenticate via social networks so that only users can access their content
 
 ----
 
-#### I can chat with other users
+#### I can chat with other users to arrange a trade
 
 ---- 
 
-#### I can look up the price of cards to compare a trade (implement an online pricing database)
+#### I can look up the price of cards so that I can compare values of a trade
 
 ---- 
 
-#### I can keep track of my trade history
+#### I can keep track of my trade history so that I remember to update my haves / wants
 
 ---- 
 
-#### I can add feedback for users
+#### I can add feedback for users to allow them to avoid bad traders
 
 
 
