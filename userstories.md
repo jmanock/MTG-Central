@@ -5,7 +5,7 @@
 
 ---- 
 
-#### I can select my city from a list to only view posts in that city (1)
+#### I can select my city from a list so that I can only view posts in that city (1)
 
 ----
  
