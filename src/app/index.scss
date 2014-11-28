@@ -1,0 +1,43 @@
+body {
+  overflow: hidden;
+  padding: 0;
+}
+.container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+}
+
+.mainImg {
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+}
+
+#mtgTitle {
+  position: absolute;
+  top: 0;
+  left: 19%;
+  color: #478938;
+  text-shadow: 2px 2px 2px rgb(0,0,0);
+  font-size: 4em;
+}
+
+.social {
+  position: absolute;
+  top: 75%;
+  left: 26%;
+}
+
+#twitter {
+  position: relative;
+  left: 110%;
+}
+
+#gplus {
+  position: relative;
+  left: 220%;
+}
