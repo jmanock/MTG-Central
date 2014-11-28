@@ -1,13 +1,13 @@
 ## MVP
 =========
 
-#### Anyone can sign up using Facebook so that they can create a post (8)
+#### Anyone can sign up using Facebook so that they can create a listing (8)
 * Users may only have one post
 * Only authenticated users can create / edit their own post
 
 ----
 
-#### Anyone can create a post so that they can display the cards they have / want (8)
+#### Anyone can create a listing so that they can display the cards they have / want (8)
 * Can add a title
 * Can add a description
 * Can add a name
@@ -36,7 +36,7 @@
 
 ---- 
 
-#### Anyone can edit their post so that they can update card quantity and delete cards (8)
+#### Anyone can edit their listing so that they can update card quantity and delete cards (8)
 * After a post has been submitted, can still be changed
 * Add new cards
 * Remove cards
@@ -44,26 +44,20 @@
 
 ---- 
 
-#### Anyone can add non-card items so that they can display gaming accessories / random supplies (3)
-* Seperate input for non-card items
-* Open text-area (not validated)
-
----- 
-
-#### Anyone can view other posts so that they can see others' have / wants (3)
+#### Anyone can view other listings so that they can see others' have / wants (3)
 * Displayed on one page
 * Ascending order based on recently updated
 
 ----
 
-#### Anyone can filter posts by state so that they can view local posts (5)
+#### Anyone can filter listings by state so that they can view local listings (5)
 * Select their state on map
 * List of cities will display
 * Select city within the state
 
 ---- 
 
-#### Anyone can search for cards in each post so that they can view posts that only contain that card (5)
+#### Anyone can search for cards so that they can view listings that only contain that card (5)
 * Autocomplete functionality
 * Search will only show posts that have that card
 
