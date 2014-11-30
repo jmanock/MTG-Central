@@ -1,0 +1,514 @@
+[
+{
+  "name":"Tenth Edition",
+  "releaseDate": "2007-07-13"
+  },
+{
+  "name":"Unlimited Edition",
+  "releaseDate": "1993-12-01"
+  },
+{
+  "name":"Revised Edition",
+  "releaseDate" : "1994-04-01"},
+{
+  "name":"Fourth Edition",
+   "releaseDate" : "1995-04-01"},
+{
+  "name":"Fifth Dawn",
+  "releaseDate" : "2004-06-04"},
+{
+  "name":"Fifth Edition",
+   "releaseDate" : "1997-03-24"},
+{
+  "name":"Classic Sixth Edition",
+  "releaseDate" :  "1999-04-21"},
+{
+  "name":"Seventh Edition",
+  "releaseDate" : "2001-04-11"},
+{
+  "name":"Eighth Edition Box Set",
+  "releaseDate" : "2003-07-28"},
+{
+  "name":"Eighth Edition",
+  "releaseDate" : "2003-07-28"},
+{
+  "name":"Ninth Edition Box Set",
+  "releaseDate" : "2005-07-29"},
+{
+  "name":"Ninth Edition",
+  "releaseDate" : "2005-07-29"},
+{
+  "name":"Shards of Alara",
+   "releaseDate" : "2008-10-03"},
+{
+  "name":"Alliances",
+  "releaseDate" : "1996-06-10"},
+{
+  "name":"Apocalypse",
+  "releaseDate" : "2001-06-04"},
+{
+  "name":"Alara Reborn",
+  "releaseDate" : "2009-04-30"},
+{
+  "name":"Archenemy",
+  "releaseDate" : "2010-06-18"},
+{
+  "name":"Arabian Nights",
+  "releaseDate" : "1993-12-01"},
+{
+  "name":"Anthologies",
+  "releaseDate" : "1998-11-01"},
+{
+  "name":"Antiquities",
+  "releaseDate" : "1994-03-01"},
+{
+  "name":"Avacyn Restored",
+  "releaseDate" : "2012-05-04"},
+{
+  "name":"Born of the Gods",
+  "releaseDate" : "2014-02-07"},
+{
+  "name":"Betrayers of Kamigawa",
+  "releaseDate" : "2005-02-04"},
+{
+  "name":"Battle Royale Box Set",
+  "releaseDate" : "1999-11-12"},
+{
+  "name":"Beatdown Box Set",
+  "releaseDate" : "2000-10-01"},
+{
+  "name":"Commander 2013 Edition",
+  "releaseDate" : "2013-11-01"},
+{
+  "name":"Commander 2014",
+  "releaseDate" : "2014-11-07"},
+{
+  "name":"Champions of Kamigawa",
+  "releaseDate" : "2004-10-01"},
+{
+  "name":"Chronicles",
+  "releaseDate" : "1995-07-01"},
+{
+  "name":"Commander's Arsenal",
+  "releaseDate" : "2012-11-02"},
+{
+  "name":"Magic: The Gathering-Commander",
+  "releaseDate" : "2011-06-17"},
+{
+  "name":"Magic: The Gathering—Conspiracy",
+  "releaseDate" : "2014-06-06"},
+{
+  "name":"Conflux",
+  "releaseDate" : "2009-02-06"},
+{
+  "name":"Coldsnap",
+  "releaseDate" : "2006-07-21"},
+{
+  "name":"Coldsnap Theme Decks",
+  "releaseDate" : "2006-07-21"},
+{
+  "name":"Duel Decks: Jace vs. Chandra",
+  "releaseDate" : "2008-11-07"},
+{
+  "name":"Duel Decks: Divine vs. Demonic",
+  "releaseDate" : "2009-04-10"},
+{
+  "name":"Duel Decks: Garruk vs. Liliana",
+  "releaseDate" : "2009-10-30"},
+{
+  "name":"Duel Decks: Phyrexia vs. the Coalition",
+  "releaseDate" : "2010-03-19"},
+{
+  "name":"Duel Decks: Elspeth vs. Tezzeret",
+  "releaseDate" : "2010-09-03"},
+{
+  "name":"Duel Decks: Knights vs. Dragons",
+  "releaseDate" : "2011-04-01"},
+{
+  "name":"Duel Decks: Ajani vs. Nicol Bolas",
+  "releaseDate" : "2011-09-02"},
+{
+  "name":"Duel Decks: Venser vs. Koth",
+  "releaseDate" : "2012-03-30"},
+{
+  "name":"Duel Decks: Izzet vs. Golgari",
+  "releaseDate" : "2012-09-07"},
+{
+  "name":"Duel Decks: Sorin vs. Tibalt",
+  "releaseDate" : "2013-03-15"},
+{
+  "name":"Duel Decks: Heroes vs. Monsters",
+  "releaseDate" : "2013-09-06"},
+{
+  "name":"Duel Decks: Jace vs. Vraska",
+  "releaseDate" : "2014-03-14"},
+{
+  "name":"Duel Decks: Speed vs. Cunning",
+  "releaseDate" : "2014-09-05"},
+{
+  "name":"Dragon's Maze",
+  "releaseDate" : "2013-05-03"},
+{
+  "name":"Dissension",
+  "releaseDate" : "2006-05-05"},
+{
+  "name":"Dark Ascension",
+  "releaseDate" : "2012-02-03"},
+{
+  "name":"Deckmasters",
+  "releaseDate" : "2001-12-01"},
+{
+  "name":"Duels of the Planeswalkers",
+  "releaseDate" : "2010-06-04"},
+{
+  "name":"From the Vault: Dragons",
+  "releaseDate" : "2008-08-29"},
+{
+  "name":"The Dark",
+  "releaseDate" : "1994-08-01"},
+{
+  "name":"Darksteel",
+  "releaseDate" : "2004-02-06"},
+{
+  "name":"Eventide",
+  "releaseDate" : "2008-07-25"},
+{
+  "name":"Duel Decks: Elves vs. Goblins",
+  "releaseDate" : "2007-11-16"},
+{
+  "name":"Exodus",
+  "releaseDate" : "1998-06-15"},
+{
+  "name":"Fallen Empires",
+  "releaseDate" : "1994-11-01"},
+{
+  "name":"Future Sight",
+  "releaseDate" : "2007-05-04"},
+{
+  "name":"Guildpact",
+  "releaseDate" : "2006-02-03"},
+{
+  "name":"Gatecrash",
+  "releaseDate" : "2013-02-01"},
+{
+  "name":"Premium Deck Series: Slivers",
+  "releaseDate" : "2009-11-20"},
+{
+  "name":"Homelands",
+  "releaseDate" : "1995-10-01"},
+{
+  "name":"Planechase",
+  "releaseDate" : "2009-09-04"},
+{
+  "name":"Ice Age",
+  "releaseDate" : "1995-06-01"},
+{
+  "name":"Invasion",
+  "releaseDate" : "2000-10-02"},
+{
+  "name":"Innistrad",
+  "releaseDate" : "2011-09-30"},
+{
+  "name":"Introductory Two-Player Set",
+  "releaseDate" : "1996-12-31"},
+{
+  "name":"Journey into Nyx",
+  "releaseDate" : "2014-05-02"},
+{
+  "name":"Judgment",
+  "releaseDate" : "2002-05-27"},
+{
+  "name":"Khans of Tarkir",
+  "releaseDate" : "2014-09-26"},
+{
+  "name":"Limited Edition Alpha",
+  "releaseDate" : "1993-08-05"},
+{
+  "name":"Limited Edition Beta",
+  "releaseDate" : "1993-10-01"},
+{
+  "name":"Legends",
+  "releaseDate" : "1994-06-01"},
+{
+  "name":"Legions",
+  "releaseDate" : "2003-02-03"},
+{
+  "name":"Lorwyn",
+  "releaseDate" : "2007-10-12"},
+{
+  "name":"Magic 2010",
+  "releaseDate" : "2009-07-17"},
+{
+  "name":"Magic 2011",
+  "releaseDate" : "2010-07-16"},
+{
+  "name":"Magic 2012",
+  "releaseDate" : "2011-07-15"},
+{
+  "name":"Magic 2013",
+  "releaseDate" : "2012-07-13"},
+{
+  "name":"Magic 2014 Core Set",
+  "releaseDate" : "2013-07-19"},
+{
+  "name":"Magic 2015 Core Set",
+  "releaseDate" : "2014-07-18"},
+{
+  "name":"Mirrodin Besieged",
+  "releaseDate" : "2011-02-04"},
+{
+  "name":"Modern Event Deck 2014",
+  "releaseDate" : "2014-05-30"},
+{
+  "name":"Masters Edition II",
+  "releaseDate" : "2008-09-22"},
+{
+  "name":"Masters Edition III",
+  "releaseDate" : "2009-09-07"},
+{
+  "name":"Masters Edition IV",
+  "releaseDate" : "2011-01-10"},
+{
+  "name":"Masters Edition",
+  "releaseDate" : "2007-09-10"},
+{
+  "name":"Multiverse Gift Box",
+  "releaseDate" : "1996-11-01"},
+{
+  "name":"Mirage",
+  "releaseDate" : "1996-10-08"},
+{
+  "name":"Modern Masters",
+  "releaseDate" : "2013-06-07"},
+{
+  "name":"Mercadian Masques",
+  "releaseDate" : "1999-10-04"},
+{
+  "name":"Morningtide",
+  "releaseDate" : "2008-02-01"},
+{
+  "name":"Mirrodin",
+  "releaseDate" : "2003-10-02"},
+{
+  "name":"Nemesis",
+  "releaseDate" : "2000-02-14"},
+{
+  "name":"New Phyrexia",
+  "releaseDate" : "2011-05-13"},
+{
+  "name":"Odyssey",
+  "releaseDate" : "2001-10-01"},
+{
+  "name":"Onslaught",
+  "releaseDate" : "2002-10-07"},
+{
+  "name":"Planechase 2012 Edition",
+  "releaseDate" : "2012-06-01"},
+{
+  "name":"Prophecy",
+  "releaseDate" : "2000-06-05"},
+{
+  "name":"Premium Deck Series: Fire and Lightning",
+  "releaseDate" : "2010-11-19"},
+{
+  "name":"Premium Deck Series: Graveborn",
+  "releaseDate" : "2011-11-18"},
+{
+  "name":"Planar Chaos",
+  "releaseDate" : "2007-02-02"},
+{
+  "name":"Planeshift",
+  "releaseDate" : "2001-02-05"},
+{
+  "name":"Portal Second Age",
+  "releaseDate" : "1998-06-01"},
+{
+  "name":"Portal",
+  "releaseDate" : "1997-05-01"},
+{
+  "name":"Portal Three Kingdoms",
+  "releaseDate" : "1999-05-01"},
+{
+  "name":"Ravnica City of Guilds",
+  "releaseDate" : "2005-10-07"},
+{
+  "name":"Rise of the Eldrazi",
+  "releaseDate" : "2010-04-23"},
+{
+  "name":"Rivals Quick Start Set",
+  "releaseDate" : "1996-07-01"},
+{
+  "name":"Return to Ravnica",
+  "releaseDate" : "2012-10-05"},
+{
+  "name":"Starter 2000",
+  "releaseDate" : "2000-04-01"},
+{
+  "name":"Starter 1999",
+  "releaseDate" : "1999-07-01"},
+{
+  "name":"Scourge",
+  "releaseDate" : "2003-05-26"},
+{
+  "name":"Shadowmoor",
+  "releaseDate" : "2008-05-02"},
+{
+  "name":"Saviors of Kamigawa",
+  "releaseDate" : "2005-06-03"},
+{
+  "name":"Scars of Mirrodin",
+  "releaseDate" : "2010-10-01"},
+{
+  "name":"Stronghold",
+  "releaseDate" : "1998-03-02"},
+{
+  "name":"Theros",
+  "releaseDate" : "2013-09-27"},
+{
+  "name":"Tempest",
+  "releaseDate" : "1997-10-14"},
+{
+  "name":"Torment",
+  "releaseDate" : "2002-02-04"},
+{
+  "name":"Time Spiral Timeshifted",
+  "releaseDate" : "2006-10-06"},
+{
+  "name":"Time Spiral",
+  "releaseDate" : "2006-10-06"},
+{
+  "name":"Urza's Destiny",
+  "releaseDate" : "1999-06-07"},
+{
+  "name":"Unglued",
+  "releaseDate" : "1998-08-11"},
+{
+  "name":"Urza's Legacy",
+  "releaseDate" : "1999-02-15"},
+{
+  "name":"Unhinged",
+  "releaseDate" : "2004-11-20"},
+{
+  "name":"Urza's Saga",
+  "releaseDate" : "1998-10-12"},
+{
+  "name":"From the Vault: Exiled",
+  "releaseDate" : "2009-08-28"},
+{
+  "name":"From the Vault: Relics",
+  "releaseDate" : "2010-08-27"},
+{
+  "name":"From the Vault: Legends",
+  "releaseDate" : "2011-08-26"},
+{
+  "name":"From the Vault: Realms",
+  "releaseDate" : "2012-08-31"},
+{
+  "name":"From the Vault: Twenty",
+  "releaseDate" : "2013-08-23"},
+{
+  "name":"From the Vault: Annihilation (2014)",
+  "releaseDate" : "2014-08-22"},
+{
+  "name":"Vanguard",
+  "releaseDate" : "1997-05-01"},
+{
+  "name":"Visions",
+  "releaseDate" : "1997-02-03"},
+{
+  "name":"Vintage Masters",
+  "releaseDate" : "2014-06-16"},
+{
+  "name":"Weatherlight",
+  "releaseDate" : "1997-06-09"},
+{
+  "name":"Worldwake",
+  "releaseDate" : "2010-02-05"},
+{
+  "name":"Zendikar",
+  "releaseDate" : "2009-10-02"},
+{
+  "name":"15th Anniversary",
+  "releaseDate" : "2008-04-01"},
+{
+  "name":"Two-Headed Giant Tournament",
+  "releaseDate" : "2005-12-09"},
+{
+  "name":"Asia Pacific Land Program",
+  "releaseDate" : "1998-09-01"},
+{
+  "name":"Arena League",
+  "releaseDate" : "1996-08-02"},
+{
+  "name":"Celebration",
+  "releaseDate" : "1996-08-14"},
+{
+  "name":"Champs and States",
+  "releaseDate" : "2006-03-18"},
+{
+  "name":"Dragon Con",
+  "releaseDate" : "1994-01-01"},
+{
+  "name":"European Land Program",
+  "releaseDate" : "2000-02-05"},
+{
+  "name":"Friday Night Magic",
+  "releaseDate" : "2000-02-01"},
+{
+  "name":"Grand Prix",
+  "releaseDate" : "2007-02-24"},
+{
+  "name":"Guru",
+  "releaseDate" : "1999-07-12"},
+{
+  "name":"Happy Holidays",
+  "releaseDate" : "2006-12-31"},
+{
+  "name":"Judge Gift Program",
+  "releaseDate" : "1998-06-01"},
+{
+  "name":"Legend Membership",
+  "releaseDate" : "1995-01-01"},
+{
+  "name":"Launch Parties",
+  "releaseDate" : "2008-02-01"},
+{
+  "name":"Media Inserts",
+  "releaseDate" : "1995-01-01"},
+{
+  "name":"Magic Game Day",
+  "releaseDate" : "2007-07-14"},
+{
+  "name":"Magic Player Rewards",
+  "releaseDate" : "2001-05-01"},
+{
+  "name":"Portal Demo Game",
+  "releaseDate" :  "1997-05-01"},
+{
+  "name":"Prerelease Events",
+  "releaseDate" : "1997-10-04"},
+{
+  "name":"Pro Tour",
+   "releaseDate" : "2007-02-09"},
+{
+  "name":"Release Events",
+  "releaseDate" : "2003-07-26"},
+{
+  "name":"Summer of Magic",
+  "releaseDate" : "2007-07-21"},
+{
+  "name":"Super Series",
+  "releaseDate" : "1999-12-01"},
+{
+  "name":"World Magic Cup Qualifiers",
+  "releaseDate" : "2013-04-06"},
+{
+  "name":"Worlds",
+  "releaseDate" : "1999-08-04"},
+{
+  "name":"Wizards of the Coast Online Store",
+  "releaseDate" : "1999-09-04"},
+{
+  "name":"WPN and Gateway",
+   "releaseDate" : "2006-01-01"}
+]
