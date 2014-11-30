@@ -1,14 +1,19 @@
 'use strict';
 
-angular.module('mtgCentral', ['ngCookies', 'ngSanitize', 'restangular', 'ngRoute'])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'app/main/main.html',
-        controller: 'MainCtrl'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+var mtgApp = angular.module('mtgCentral', ['mtgcMain', 'mtgcList', 'ngCookies', 'ngSanitize', 'restangular', 'ngRoute']);
+
+mtgApp.config(function ($routeProvider) {
+  $routeProvider
+    .when('/main', {
+      templateUrl: 'app/main/main.html',
+      controller: 'MainCtrl'
+    })
+    .when('/listings', {
+      templateUrl: 'app/listings/listings.html',
+      controller: 'ListCtrl'
+    })
+    .otherwise({
+      redirectTo: '/'
+    });
   })
 ;
