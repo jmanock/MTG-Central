@@ -1,0 +1,57 @@
+body {
+  padding: 0;
+}
+
+.navbar-header img {
+  height: 23pt;
+}
+
+.navbar-brand {
+  padding-top: 10px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.navbar-nav.navbar-right:last-child {
+  padding: 10pt;
+  margin: 0;
+}
+
+#listings {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  padding: 0;
+}
+
+#listings > img {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 250%;
+}
+
+#main {
+  position: absolute;
+  text-align: center;
+  top: 18%;
+  left: 8%;
+  height: 1000px;
+  background-color: #eee;
+}
+
+#search {
+  position: absolute;
+  text-align: center;
+  top: 180%;
+  left: 8%;
+  height: 200px;
+  background-color: #eee;
+}
