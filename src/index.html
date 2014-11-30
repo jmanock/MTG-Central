@@ -27,16 +27,18 @@
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-  <form ng-submit="addName()">
+  <form>
     Search:<input ng-model="query" type='text'/>
-    <input type='submit' value='add'/>
-    <input type='textarea'
+
+    <textarea rows='4' cols='50' ng-submit="addName()" ng-model='enteredName'>
+    </textarea>
     <hr>
   </form>
 
     <ol>
-      <li ng-repeat="set in sets | filter:query | orderBy:'releaseDate'">
-        {{set.name}} | {{set.releaseDate}} </li>
+      <li ng-repeat="set in sets | filter:query | orderBy:'releaseDate'" style="list-style-type:none">
+        {{set.name}} | {{set.releaseDate}}
+        <a href='' ng-click="addName(name)"> Add</a></li>
     </ol>
 
 
