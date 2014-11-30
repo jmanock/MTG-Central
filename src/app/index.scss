@@ -1,5 +1,4 @@
 body {
-  overflow: hidden;
   padding: 0;
 }
 .container {
@@ -41,4 +40,21 @@ body {
 #gplus {
   position: relative;
   left: 220%;
+}
+
+.navbar-header img {
+  height: 23pt;
+}
+
+.navbar-brand {
+  padding-top: 10px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.navbar-nav.navbar-right:last-child {
+  padding: 10pt;
+  margin: 0;
 }

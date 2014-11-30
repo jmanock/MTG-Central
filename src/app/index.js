@@ -4,11 +4,11 @@ var mtgApp = angular.module('mtgCentral', ['mtgcMain', 'mtgcList', 'ngCookies', 
 
 mtgApp.config(function ($routeProvider) {
   $routeProvider
-    .when('/main', {
+    .when('/', {
       templateUrl: 'app/main/main.html',
       controller: 'MainCtrl'
     })
-    .when('/listings', {
+    .when('/list', {
       templateUrl: 'app/listings/listings.html',
       controller: 'ListCtrl'
     })
