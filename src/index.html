@@ -21,25 +21,25 @@
     <!-- build:js scripts/modernizr.js -->
     <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
-
   </head>
+
   <body ng-controller='MainCtrl'>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-  <form>
-    Search:<input ng-model="query" type='text'/>
-
-    <textarea rows='4' cols='50' ng-submit="addName()" ng-model='enteredName'>
-    </textarea>
-    <hr>
+  <form ng-submit='todoAdd()'>
+    <input ng-model="query" type='text' placeholder='Search Cards'>
+    <input type='submit' value="Add New">
+    <br>
   </form>
 
-    <ol>
-      <li ng-repeat="set in sets | filter:query | orderBy:'releaseDate'" style="list-style-type:none">
-        {{set.name}} | {{set.releaseDate}}
-        <a href='' ng-click="addName(name)"> Add</a></li>
-    </ol>
+    <ul>
+      <li ng-repeat="set in sets | filter:query | orderBy:'cardSetName'"
+      style="list-style-type:none" ng-class="{'selected':selection.set}">
+        <a href='' ng-click='toggle(set)'>{{set.name}} | {{set.releaseDate}}</a>
+        </li>
+    </ul>
+    <pre>{{selection}}</pre>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
