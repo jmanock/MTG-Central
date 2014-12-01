@@ -19,7 +19,7 @@ body {
   margin: 0;
 }
 
-#listings {
+.container {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -28,7 +28,7 @@ body {
   padding: 0;
 }
 
-#listings > img {
+.container > img {
   z-index: -1;
   position: absolute;
   top: 0;
@@ -43,8 +43,47 @@ body {
   text-align: center;
   top: 18%;
   left: 8%;
-  height: 1000px;
-  background-color: #eee;
+  height: 900px;
+  background-color: #222222;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+#main > h3 {
+  padding: 5pt 0 0 0;
+  margin: 0;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+  height: 30pt;
+}
+
+.list {
+  margin-top: 4%;
+  list-style:none;
+  padding: 8pt;
+}
+
+.listing {
+  height: 30pt;
+}
+
+.listing:nth-child(odd) {
+  background-color: rgb(221, 221, 221);
+}
+
+.listing:nth-child(even) {
+  background-color: rgb(234, 234, 234);
+}
+
+.listTitle {
+  text-align: left;
+  line-height: 30pt;
+}
+
+.listAuthor {
+  text-align: right;
+  line-height: 30pt;
 }
 
 #search {
@@ -53,5 +92,33 @@ body {
   top: 180%;
   left: 8%;
   height: 200px;
-  background-color: #eee;
+  background-color: #222222;
+}
+
+#search > h3 {
+  color: white;
+  margin-bottom: 10pt;
+}
+
+#search > h4 {
+  position: relative;
+  top: 32%;
+}
+
+#search > div > label {
+  color: #555;
+  margin-right: 2pt;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  font-style: italic;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  font-style: italic;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  font-style: italic;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  font-style: italic;
 }
