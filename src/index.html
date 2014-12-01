@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" ng-app="mtgCentral">
+<html ng-app="Demo" ng-controller="DemoController">
   <head>
     <meta charset="utf-8">
     <title>Team Rocket</title>
@@ -23,10 +23,10 @@
     <!-- endbuild -->
   </head>
 
-  <body ng-controller='MainCtrl'>
-    <!--[if lt IE 10]>
+  <body>
+    <!-- [if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
+    [endif] -->
   <form ng-submit='todoAdd()'>
     <input ng-model="search" type='text' placeholder='Search Cards'>
     <input type='submit' value="Add New">
@@ -34,24 +34,27 @@
   </form>
 
     <ul>
-      <li ng-repeat="set in sets | filter:search | orderBy:'cardSetName'"
-      style="list-style-type:none" ng-class="{'selected':selection.set}"
+      <li
+      ng-repeat="set in sets | filter:search | orderBy:'cardSetName'"
+      style="list-style-type:none"
+      ng-controller="ItemController"
+      ng-click="toggleSelection()"
+      ng-class="{selected: isSelected}"
       ng-show='search'>
-        <a href='' ng-click='toggle(set)'>{{set.name}} | {{set.releaseDate}}</a>
+      <span>
+      {{set.name}} | {{set.releaseDate}}
+    </span>
         </li>
     </ul>
-    <pre>{{selection}}</pre>
+    <p ng-show="selectedCards.length">
+    <strong>Selected Cards </strong>:
+    <span
+      ng-repeat='card in selectedCards'>
+      {{card.name}}
+      <span ng-show=" ! $last "> --</span>
+    </span>
+  </p>
 
-
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-    <script>
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-      e.src='//www.google-analytics.com/analytics.js';
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-      ga('create','UA-XXXXX-X');ga('send','pageview');
-    </script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
