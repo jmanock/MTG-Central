@@ -10,7 +10,8 @@
     "restangular": "1.3.x",
     "angular-route": "1.3.x",
     "bootstrap-sass-official": "3.2.x",
-    "angularfire": "~0.9.0"
+    "angularfire": "~0.9.0",
+    "bourbon": "7de19e718bc3ff9b61fd7ab982273eca8b5c454c"
   },
   "devDependencies": {
     "angular-mocks": "1.3.x"

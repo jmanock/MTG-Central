@@ -1,0 +1,198 @@
+@import 'bower_components/bourbon/dist/bourbon';
+
+@import 'partials/variables'; 
+
+@import 'partials/mixins'; 
+
+@import 'partials/layout'; 
+
+
+html * {
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*, *:after, *:before {
+	@include box-sizing(border-box);
+}
+
+body {
+	font: {
+		size: 100%;
+		family: $main-font;
+	}
+	color: $color-1;
+	backgound-color: $color-4;
+
+	h2 {
+		color: white;
+	}
+}
+
+body, html {
+	height: 100%;
+}
+
+a {
+	color: $color-3;
+	text-decoration: none;
+}
+
+h2 {
+  font-family: 'Cinzel', serif; 
+
+  }
+
+body {
+  font-size: 10%;
+  font-family: 'Cinzel', serif; }
+  body header {
+    padding-top: 17px;
+    padding-bottom: 20px;
+    padding-top: 15px; }
+    body header a img {
+      margin-top: -18px; }
+
+body > header > a:nth-child(5) {
+  padding-left: 65px;
+  padding-right: 60px;
+  padding-bottom: 15px; }
+
+body > header > a:nth-child(3) {
+  padding-left: 75px;
+  padding-right: 70px;
+  padding-bottom: 15px; }
+
+body > main > div.cd-scrolling-bg.cd-color-2 > div > p {
+  color: white;
+  padding-top: 50px;
+  font-size:28px; }
+
+body > main > div.cd-fixed-bg.cd-bg-2 > h2 {
+  font-size: 70px; }
+
+body > main > div.cd-fixed-bg.cd-bg-3 > h2 {
+  font-size: 70px; }
+
+body > main > div.cd-fixed-bg.cd-bg-4 > h2 {
+  font-size: 70px; }
+
+
+
+/*Modules for break points*/
+
+.cd-container {
+	width: 90%;
+	max-width: $M;
+	margin: 0 auto;
+	height: 850px;
+
+	p {
+		font-size: 50px;
+	}
+
+	&::after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+
+/* --------------------------------- */
+
+.cd-main-content {
+	height: 100%;
+	position: relative;
+	z-index: index($main-elements, main-content); 
+	font-size: 40px;
+}
+
+.cd-fixed-bg {
+	position: relative;
+	min-height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: index($bg-elements, fixed-bg);
+	
+	h1, h2 {
+		position: absolute;
+		@include center;
+		width: 90%;
+		max-width: $L;
+
+		text-align: center;
+		@include font-size(30px);
+		text-shadow: 0 1px 3px rgba(#000, .3);
+		color: white;
+	}
+
+	&.cd-bg-1 {
+		background-image: url('img/mtg-background-1.jpg');
+	}
+
+	&.cd-bg-2 {
+		background-image: url('img/mtg-background-2.jpg');
+	}
+
+	&.cd-bg-3 {
+		background-image: url('img/mtg-background-3.jpg');
+	}
+
+	&.cd-bg-4 {
+		background-image: url('img/mtg-background-4.jpg');
+	}
+
+		@include MQ(M) {
+		h1, h2 {
+			font-size: 36px;
+		}
+	}
+
+	@include MQ(L) {
+		background-attachment: fixed;
+
+		h1, h2 {
+			font-size: 48px;
+			font-weight: 300;
+		}
+	
+}
+
+.cd-scrolling-bg {
+	position: relative;
+	min-height: 100%;
+	padding: 4em 0;
+	line-height: 1.6;
+	box-shadow: 0 0 50px rgba(#000, .5);
+	z-index: index($bg-elements, scrolling-bg);
+
+	&.cd-color-1 {
+		background-color: $color-1;
+		color: lighten($color-1, 40%);
+	}
+
+	p {
+		font-size: 40px;
+	}
+	
+	&.cd-color-2 {
+		background-color: $color-2;
+		color: $color-1;
+	}
+
+	&.cd-color-3 {
+		background-color: $color-3;
+		color: $color-1;
+	}
+
+	@include MQ(M) {
+		padding: 8em 0;
+		@include font-size(20px);
+		line-height: 2;
+		font-weight: 300;
+	}
+ }
+}
+
+
