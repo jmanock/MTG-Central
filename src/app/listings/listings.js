@@ -25,4 +25,14 @@ mtgcList.controller('ListCtrl', ['$scope', '$http', function ($scope, $http){
     { 'id' : '19', 'title' : 'Random generic have // wants', 'author' : 'Some Guy'},
     { 'id' : '20', 'title' : 'Random generic have // wants', 'author' : 'Some Guy'}
     ];
+
+    // var ref = new Firebase("https://mtg-central.firebaseio.com/");
+    //
+    // ref.on("value", function(snapshot) {
+    //   $scope.cards = snapshot.val();
+    //   console.log(snapshot.val());
+    // }, function (errorObject) {
+    //   console.log("The read failed: " + errorObject.code);
+    // });
+
 }]);
