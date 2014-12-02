@@ -23,29 +23,46 @@
     <!-- endbuild -->
   </head>
 
-  <body ng-controller='MainCtrl as app'>
-    <!--[if lt IE 10]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-  <form ng-submit='todoAdd()'>
-    <input ng-model="search" type='text' placeholder='Search Cards'>
-    <input type='submit' value="Add New">
-    <br>
-  </form>
+   <body ng-controller='MainCtrl as app'>
+  <!--[if lt IE 10]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+<form ng-submit='todoAdd()'>Search:
+  <input ng-model="searchCards" type='text' placeholder='Search Cards'>
+  <input type='submit' value="Add New">
+  <br>
+</form>
 
-  <ul>
-    <li ng-repeat="set in app.sets | filter:search | orderBy:'name'"
-    style="list-style-type:none"
-    ng-class="{'selected':selection.set}"
-    ng-show='search'>
-    <a href='' ng-click='toggle(set.name)'>{{set.name}} | {{set.releaseDate}}</a>
-    </li>
-  </ul>
-  <pre>{{selection}}
-  </pre>
+<ul>
+  <li ng-repeat = "set in sets | orderBy:orderBy | filter:searchCards"
+  style='list-style-type:none'>
+  {{set.name}} | {{set.cardSetName}}</li>
+</ul>
+
+
+<!-- code works with $http -->
+<!--   <li ng-repeat="set in app.sets | filter:search | orderBy:'name'"
+style="list-style-type:none"
+ng-class="{'selected':selection.set}"
+ng-show='search'>
+<a href='' ng-click='toggle(set.name)'>{{set.name}} | {{set.cardSetName}}</a>
+</li>
+</ul>
+<pre>{{selection}}
+</pre> -->
 <!--     <ul>
   <li ng-repeat="set in app.sets">
     {{set.name}}
+  </li>
+</ul>
+-->
+
+
+   <!--<p>Search: <input ng-model="searchText" /></p>
+<ul class='chatbox'>
+  <li ng-repeat="message in messages | orderBy:orderBy | filter:searchText">
+    {{message.user}}: {{message.text}}
+    <a href="#" ng-click='messages.\$remove(message)'>X</a>
   </li>
 </ul> -->
 
@@ -69,10 +86,11 @@
   <script src="../bower_components/lodash/dist/lodash.compat.js"></script>
   <script src="../bower_components/restangular/dist/restangular.js"></script>
   <script src="../bower_components/angular-route/angular-route.js"></script>
+  <script src="../bower_components/firebase/firebase.js"></script>
+  <script src="../bower_components/angularfire/dist/angularfire.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
-  <script>
-  </script>
+
   <!-- build:js({.tmp,src}) scripts/app.js -->
   <script src="app/index.js"></script>
   <script src="app/main/main.controller.js"></script>
