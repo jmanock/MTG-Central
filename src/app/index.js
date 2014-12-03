@@ -33,9 +33,15 @@ angular.module('mtgCentral', ['ngCookies', 'ngSanitize', 'restangular', 'ui.rout
       data: {
         css: 'app/listings/listings.css'
       }
+    })
+
+    .state('search', {
+      url: '/search',
+      templateUrl: 'app/search/search.html',
+      controller: 'SearchCtrl',
     });
 
     // Catch all for routes
     // Send users to default route (home)
     $urlRouterProvider.otherwise('/');
-  })
+  });
