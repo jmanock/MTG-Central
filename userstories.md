@@ -6,6 +6,16 @@
 * Only authenticated users can create / edit their own listing
 
 ----
+#### Anyone can view other listings so that they can see others' have / wants (3)
+* Displayed on one page
+* Ascending order based on recently updated
+
+----
+
+#### Anyone can search for cards so that they can find only posts with that card (5)
+* Same functionality as searching when creating listing
+
+---- 
 
 #### An authenticated user can create a listing so that they can display the cards they have/want (8)
 * Can add a title
@@ -22,14 +32,15 @@
 
 ----
 
-#### An authenticated user can click a card in the search field to add it to their have/want list (13)
+#### An authenticated user can view results of their search so that they can add cards to their have/want list (13)
+* Click to add item
 * Create a new list item 
 * Drop down for quanity 
 * Non editable text field
 
 ----
 
-#### An authenticated user can delete a card from their list so that they can remove cards they no longer have/want (3)
+#### An authenticated user can remove a card while creating their list so that they can fix mistakes (3)
 * Delete individual items rather than whole list
 * Can't edit the card text
 * Can update quantity or delete
@@ -44,18 +55,9 @@
 
 ---- 
 
-#### Anyone can view other listings so that they can see others' have / wants (3)
-* Displayed on one page
-* Ascending order based on recently updated
 
-----
-
-#### Anyone can search for cards so that they can find only posts with that card (5)
-* Same functionality as searching when creating listing
-
----- 
-
-#### An authenticated user can contact another user via Facebook so that they can 
+#### An authenticated user can link to a user's Facebook so that they can contact them via Facebook (3)
+* Use Facebook messenger for chat
 
 ========
 ## Stretch Goals
