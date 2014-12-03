@@ -38,4 +38,4 @@ angular.module('mtgCentral', ['ngCookies', 'ngSanitize', 'restangular', 'ui.rout
     // Catch all for routes
     // Send users to default route (home)
     $urlRouterProvider.otherwise('/');
-  })
+  });

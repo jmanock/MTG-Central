@@ -1,11 +1,11 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<div class="container" ng-controller="ListCtrl">
+<div class="container" ng-controller="ListCtrl as list">
   <img src="http://i.imgur.com/DCUum.jpg">
   <section class="col-md-10" id="main">
     <h3 class="col-md-12" id="mainH3">Listings</h3>
     <ul class="list">
-      <li class="listing" ng-repeat="listing in listings">
+      <li class="listing" ng-repeat="listing in list.listings">
         <a class="listTitle col-md-6" href="">{{listing.title}}</a>
         <a class="listAuthor col-md-6" href="">{{listing.author}}</a>
       </li>
