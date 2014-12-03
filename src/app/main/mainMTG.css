@@ -11,16 +11,12 @@ body {
   font-size: 100%;
   font-family: "Cinzel", serif;
   color: #000000;
-  background-color: #000000; }
+  backgound-color: #000000; }
   body h2 {
     color: white; }
 
 body, html {
   height: 100%; }
-
-#mainContainer {
-  height: 100%;
-}
 
 a {
   color: #000000;
@@ -34,22 +30,99 @@ body {
   font-family: 'Cinzel', serif; }
 
 body header {
-  padding-top: 17px;
-  padding-bottom: 20px;
-  padding-top: 15px; }
+  /* padding-top: 17px;
+   padding-bottom: 20px;
+   padding-top: 15px;*/
+  margin-left: 20px;
+  background-color: black; }
+
+.button {
+  width: 150px;
+  padding: 10px;
+  background-color: #FF8C00;
+  box-shadow: -8px 8px 10px 3px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  text-decoration: none; }
+
+#cover {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  display: none; }
+
+#loginScreen {
+  height: 380px;
+  width: 340px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 10;
+  display: none;
+  background: url(http:www.facebook.com) no-repeat;
+  border: 5px solid #cccccc;
+  border-radius: 10px; }
+
+#loginScreen:target, #loginScreen:target + #cover {
+  display: block;
+  opacity: 2; }
+
+.cancel {
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 2px;
+  background: whitesmoke;
+  color: black;
+  height: 30px;
+  width: 35px;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold; }
 
 body header a img {
-  margin-top: -18px; }
+  /*      margin-top: -18px; */ }
 
-body > div > header > a:nth-child(5) {
-  padding-left: 65px;
-  padding-right: 60px;
-  padding-bottom: 15px; }
+body > div > header > a:nth-child(2) {
+  padding-bottom: 15px;
+  padding-left: 20px; }
 
 body > div > header > a:nth-child(3) {
-  padding-left: 75px;
-  padding-right: 70px;
-  padding-bottom: 15px; }
+  padding-left: 142px; }
+  body > div > header > a:nth-child(3) img {
+    height: 125px;
+    width: 125px; }
+
+body > div > header > a:nth-child(4) {
+  padding-left: 20px; }
+  body > div > header > a:nth-child(4) img {
+    height: 125px;
+    width: 125px; }
+
+body > div > header > a:nth-child(5) {
+  padding-bottom: 15px;
+  vertical-align: middle;
+  padding-right: 15px;
+  padding-left: 20px; }
+  body > div > header > a:nth-child(5) img {
+    height: 125px;
+    width: 125px; }
+
+body > div > header > a:nth-child(6) {
+  margin-bottom: 30px;
+  margin-right: 15px; }
+  body > div > header > a:nth-child(6) img {
+    height: 125px;
+    width: 125px; }
+
+body > div > header > a:nth-child(7) {
+  margin-bottom: 30px; }
+  body > div > header > a:nth-child(7) img {
+    height: 125px;
+    width: 125px; }
 
 body > div > main > div.cd-scrolling-bg.cd-color-2 > div > p {
   color: white;
@@ -90,7 +163,7 @@ body > div > main > div.cd-fixed-bg.cd-bg-4 > h2 {
   min-height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
- /* background-position: center center;*/
+  /*	background-position: center center;*/
   z-index: 1; }
   .cd-fixed-bg h1, .cd-fixed-bg h2 {
     position: absolute;
@@ -127,14 +200,7 @@ body > div > main > div.cd-fixed-bg.cd-bg-4 > h2 {
       .cd-fixed-bg h1, .cd-fixed-bg h2 {
         font-size: 48px;
         font-weight: 300; } }
-  .cd-scrolling-bg {
-    position: relative;
-    max-height: 105%;
-    padding: 4em 0;
-    line-height: 1.6;
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
-    z-index: 2; }
-  .cd-fixed-bg {
+  .cd-fixed-bg .cd-scrolling-bg {
     position: relative;
     min-height: 100%;
     padding: 4em 0;
@@ -159,3 +225,5 @@ body > div > main > div.cd-fixed-bg.cd-bg-4 > h2 {
         font-size: 1.25rem;
         line-height: 2;
         font-weight: 300; } }
+
+/*# sourceMappingURL=mainMTG.css.map */
