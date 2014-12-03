@@ -1,0 +1,28 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div class="container" ng-controller="ListCtrl">
+  <img src="http://i.imgur.com/DCUum.jpg">
+  <section class="col-md-10" id="main">
+    <h3 class="col-md-12" id="mainH3">Listings</h3>
+    <ul class="list">
+      <li class="listing" ng-repeat="listing in listings">
+        <a class="listTitle col-md-6" href="">{{listing.title}}</a>
+        <a class="listAuthor col-md-6" href="">{{listing.author}}</a>
+      </li>
+    </ul>
+  </section>
+  <section class="col-md-10" id="search">
+    <h3>Search By:</h3>
+    <div id="col1" class="col-md-6">
+      <label for="card_name">Card Name</label></a>
+      <input type="text" id="card_name" name="card_name" placeholder="Black Lotus"></input>
+    </div>
+    <div id="col2" class="col-md-6">
+      <label for="set_name">Set Name</label>
+      <input type="text" id="set_name" name="set_name" placeholder="Alpha"></input>
+    </div>
+    <h4><a href="index.html#/list#">Back to top</a></h4>
+  </section>
+</div>
+
+<!-- listings/{{listings.id}} -->
