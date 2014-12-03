@@ -8,18 +8,18 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <link href="http://fonts.googleapis.com/css?family=Cinzel:700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Josefin+Slab:700" rel="stylesheet" type="text/css">
-    <!-- build:css({.tmp,src}) styles/vendor.css -->
 
-    <!-- <link rel="stylesheet" href="app/listings/listings.css"> -->
-    <link rel="stylesheet" href="app/main/mainMTG.css">
-    <link rel="stylesheet" href="app/main/reset.css">
+    <!-- build:css({.tmp,src}) styles/vendor.css -->
+    <link rel="stylesheet" href="app/vendor.css">
+
+    <!-- user added stylesheets -->
 
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
 
     <!-- build:css({.tmp,src}) styles/app.css -->
-    <link rel="stylesheet" href="app/index.css">
+    <!-- <link rel="stylesheet" href="app/index.css"> -->
     <!-- endbuild -->
 
     <!-- build:js scripts/modernizr.js -->
@@ -31,7 +31,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div ng-view id="mainContainer"> </div>
+    <div ui-view id="mainContainer"> </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
@@ -51,9 +51,10 @@
     <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="../bower_components/lodash/dist/lodash.compat.js"></script>
     <script src="../bower_components/restangular/dist/restangular.js"></script>
-    <script src="../bower_components/angular-route/angular-route.js"></script>
     <script src="../bower_components/firebase/firebase.js"></script>
     <script src="../bower_components/angularfire/dist/angularfire.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-ui-router-styles/ui-router-styles.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
