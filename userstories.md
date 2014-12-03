@@ -15,7 +15,7 @@
 #### Anyone can search for cards so that they can find only posts with that card (5)
 * Same functionality as searching when creating listing
 
----- 
+----
 
 #### An authenticated user can create a listing so that they can display the cards they have/want (8)
 * Can add a title
@@ -24,7 +24,7 @@
 * Can add the shop location that they frequent
 * Can add an email
 
----- 
+----
 
 #### An authenticated user can search for a card so that they can add it to their have/want list (8)
 * Autocomplete functionality
@@ -34,8 +34,8 @@
 
 #### An authenticated user can view results of their search so that they can add cards to their have/want list (13)
 * Click to add item
-* Create a new list item 
-* Drop down for quanity 
+* Create a new list item
+* Drop down for quanity
 * Non editable text field
 
 ----
@@ -45,7 +45,7 @@
 * Can't edit the card text
 * Can update quantity or delete
 
----- 
+----
 
 #### An authenticated user can edit their listing so that they can update card quantity and delete cards (8)
 * After a post has been submitted, can still be changed
@@ -53,7 +53,7 @@
 * Remove cards
 * Change quantity
 
----- 
+----
 
 
 #### An authenticated user can link to a user's Facebook so that they can contact them via Facebook (3)
@@ -65,17 +65,14 @@
 
 #### Anyone can chat with other users to arrange a trade
 
----- 
+----
 
 #### Anyone can look up the price of cards so that they can compare values of a trade
 
----- 
+----
 
 #### Anyone can keep track of their trade history so that they remember to update my haves / wants
 
----- 
+----
 
 #### Anyone can add feedback for users to allow them to avoid bad traders
-
-
-
