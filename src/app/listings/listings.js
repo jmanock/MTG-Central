@@ -1,8 +1,8 @@
 'use strict';
 
-var mtgcList = angular.module('mtgcList', []);
+angular.module('mtgCentral')
 
-mtgcList.controller('ListCtrl', ['$scope', '$http', function ($scope, $http){
+.controller('ListCtrl', ['$scope', '$http', function ($scope, $http){
     $scope.listings = [
     { 'id' : '1', 'title' : 'Standard, Modern, and Legacy for trade', 'author' : 'Alex Soper'},
     { 'id' : '2', 'title' : 'Commander for trade (Foils, foreign, etc)', 'author' : 'Jim James'},

@@ -16,13 +16,15 @@
 
 <main class="cd-main-content" ng-controller="MainCtrl as app">
   <div class="cd-fixed-bg cd-bg-1">
-    <h1>Please login to continue...</h1>
-    <p>
+    <div ng-hide="app.user">
+      <h1>Please login to continue...</h1>
       <button class="btn btn-lg btn-primary" ng-click="app.login()">Login with Facebook</button>
+    </div>
 
-    </p>
-    <div ng-show="app.login()">
+    <div ng-show="app.user">
       <h1>Hello, {{app.user.facebook.displayName}} </h1>
+
+      <button class="btn btn-danger" ng-click="app.logout()">Logout</button>
     </div>
   </div>
 
