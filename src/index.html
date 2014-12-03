@@ -29,14 +29,14 @@
   <![endif]-->
 <form ng-submit='todoAdd()'>Search:
   <input ng-model="searchCards" type='text' placeholder='Search Cards'>
-  <input type='submit' value="Add New">
+
   <br>
 </form>
 
 <ul>
   <li ng-repeat = "set in sets | orderBy:orderBy | filter:searchCards"
   style='list-style-type:none'>
-  {{set.name}} | {{set.cardSetName}}</li>
+  {{set.name}} | {{set.cardSetName}} </li>
 </ul>
 
 
