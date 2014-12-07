@@ -1,40 +1,18 @@
+<div class="col-md-6" ng-controller='SearchCtrl as search'>
+  <!--[if lt IE 10]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
-<div ng-controller='SearchCtrl as search' class='search'>
+  <ul>
+    <input autocomplete="off" type="text" ng-model="searchForm" ng-keyup="search.searchByName()" name="q" id="topsearch" placeholder="Search..." class="field" />
+    <li ng-repeat = "card in search.cards | limitTo: 10">
+      <p ng-click="search.addItem($index)">{{card.name}} | {{card.cardSetName}}</p>
+    </li>
+  </ul>
 
-  <div ng-controller='SearchCtrl'>
-  <!--  [if lt IE 10]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-     <form ng-submit='todoAdd()' class='searchBar'>
-      <input type='text' ng-model='searchText' placeholder='Search Cards'>
-
-      <br>
-    </form>
-
-    <ul>
-      <li ng-repeat = "set in search.sets  | filter:searchText | orderBy:cardSetName"
-      style='list-style-type:none' class='cards'>
-        {{set.name}} | {{set.cardSetName}} </li>
-      </ul>
-      <div class='addWant'>
-
-        <p>Have Cards</p>
-
-        <ul>
-          <select>
-            <option value='1'>1</option>
-            <option value='2'>2</option>
-            <option value='3'>3</option>
-            <option value='4'>4</option>
-            <option value='5+'>5+</option>
-          </select>
-          <li>Guardian Angel | Limited Edition Alpha</li>
-
-        </ul>
-      </div>
-      <li ng-repeat = "set in sets  | filter:searchText | orderBy:cardSetName"
-      style='list-style-type:none'>
-      {{set.name}} | {{set.cardSetName}} </li>
-    </ul>
-        
-      </div>
+  <ul>
+    <li ng-repeat="have in search.haves">
+      {{have.name}} | {{have.cardSetName}}
+    </li>
+  </ul>
+</div>
