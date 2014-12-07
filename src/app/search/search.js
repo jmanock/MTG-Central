@@ -5,7 +5,7 @@ angular.module('mtgCentral')
 
 .factory('cards', ['$firebase', function($firebase){
   var ref = new Firebase('https://mtg-central.firebaseio.com/cards')
-  .limitToFirst(500);
+  //.limitToFirst(10000);
   return $firebase(ref).$asArray();
 }])
 
@@ -15,6 +15,7 @@ angular.module('mtgCentral')
     var deffered = $q.defer();
     if (searchString.length >= 3) {
       // Figure out the best way to add a delay
+
       $.ajax({
         url: "http://api.mtgdb.info/search/" + searchString,
         success: function(data) {
@@ -37,6 +38,7 @@ angular.module('mtgCentral')
 
   this.sets = cards;
   this.haves = [];
+  this.wants = [];
   //var badSets = ['badSet'];
 
   this.cards = [];
@@ -53,6 +55,8 @@ angular.module('mtgCentral')
   };
 
   this.addItem = function(index){
+    if($('#haveCheck').prop('checked')){
+      console.log('reading right');
     if(self.haves.length === 0){
       self.haves.push(self.cards[index]);
     } else {
@@ -67,23 +71,33 @@ angular.module('mtgCentral')
         self.haves.push(self.cards[index]);
       }
     }
-  };
+  }
+};
+this.addItemWant = function(index){
+  if($('#wantCheck').prop('checked')){
+    console.log('anything???');
+    if(self.wants.length===0){
+      self.wants.push(self.cards[index]);
+    }else{
+      var duplicate = false;
+      self.wants.some(function(value){
+        var tempId = self.cards[index].id;
+        if(value.id === tempId){
+          duplicate = true;
+        }
+      });
+      if(duplicate === false){
+        self.wants.push(self.cards[index]);
+      }
+    }
+   }
+};
+  $('.checkbox').on('change', function(){
+    $('.checkbox').not(this).prop('checked', false);
+  });
+  if($('#wantCheck').prop('checked')){
+    console.log('now');
+  }else{
+    console.log('wrong');
+  }
 }]);
-
-// $(document).ready(function() {
-//   $('#topsearch').keyup(function() {
-//     var searchString = $("#topsearch").val();
-//     if (searchString.length >= 3) {
-//       $('#data_returned div').remove();
-//       $.ajax({
-//         url: "http://api.mtgdb.info/search/" + searchString,
-//         success: function(data) {
-//           console.log(data);
-//           data.forEach(function(element) {
-//             $('#data_returned').append('<div>' + element.name + '</div>');
-//           });
-//         }
-//       });
-//     }
-//   });
-// });

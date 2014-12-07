@@ -15,44 +15,22 @@
   height: 200px;
   width: 300px;
   overflow: auto;
-  
-body{
-  background-color:#222222;
 }
-.search{
-  text-indent:2%;
-  width:50%;
-}
-.addWant{
-  background-color:rgb(221, 221, 221);
+#have{
+  background-color:lightgray;
   position:fixed;
-  top:6.3%;
+  top:5%;
   right:5%;
   width:40%;
   height:45%;
-}
-.addWant p{
-  text-align:center;
-  text-decoration:underline;
-}
-.addWant li{
   list-style-type:none;
-  color:#377836;
-  float:right;
-  margin-right:30%;
 }
-select{
-  clear:both;
-}
-.cards:nth-child(odd) {
-  background-color: rgb(221, 221, 221);
-}
-
-.cards:nth-child(even) {
-  background-color: rgb(234, 234, 234);
-}
-.searchBar{
-  position:relative;
-  left:4.3%;
-
+#want{
+  background-color:gray;
+  position:fixed;
+  top:45%;
+  right:5%;
+  width:40%;
+  height:45%;
+  list-style-type:none;
 }

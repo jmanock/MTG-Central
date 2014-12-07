@@ -4,15 +4,34 @@
   <![endif]-->
 
   <ul>
-    <input autocomplete="off" type="text" ng-model="searchForm" ng-keyup="search.searchByName()" name="q" id="topsearch" placeholder="Search..." class="field" />
-    <li ng-repeat = "card in search.cards | limitTo: 10">
-      <p ng-click="search.addItem($index)">{{card.name}} | {{card.cardSetName}}</p>
+    <input autocomplete="off" type="text" ng-model="searchForm"
+    ng-keyup="search.searchByName()" name="q" id="topsearch"
+    placeholder="Search Cards..." class="field" />
+    Have:<input type='checkbox' class='checkbox'  id='haveCheck'/>
+
+    Want:<input type='checkbox'class='checkbox' checked id='wantCheck'/>
+    <li ng-repeat = "card in search.cards | limitTo: 15"
+    style='list-style-type:none'>
+      <p ng-click="search.addItem($index)">
+
+        <a href=''ng-click='search.addItemWant($index)'>
+        {{card.name}} | {{card.cardSetName}}
+        </a>
+      </p>
     </li>
   </ul>
 
-  <ul>
-    <li ng-repeat="have in search.haves">
+  <ul id='have'>
+    <li ng-repeat="have in search.haves" >
       {{have.name}} | {{have.cardSetName}}
+      <a href=''ng-click='removeCards($index)' >remove</a>
+    </li>
+  </ul>
+
+  <ul id='want'>
+    <li ng-repeat='want in search.wants'>
+      {{want.name}} | {{want.cardSetName}}
+      <a href=''> remove</a>
     </li>
   </ul>
 </div>
