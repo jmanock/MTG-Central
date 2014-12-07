@@ -54,49 +54,76 @@ angular.module('mtgCentral')
     });
   };
 // Add cards to a Have List
-  this.addItem = function(index){
+//  this.addItem = function(index){
     // First check if the `Have` check box is checked
-    if($('#haveCheck').prop('checked')){
+  //   if($('#haveCheck').prop('checked')){
+  //     var list = self.haves;
+  //   if(list.length === 0){
+  //     list.push(self.cards[index]);
+  //   } else {
+  //     var duplicate = false;
+  //     list.some(function (value) {
+  //       var tempId = self.cards[index].id;
+  //       if (value.id === tempId) {
+  //         duplicate = true;
+  //       }
+  //     });
+  //     if (duplicate === false) {
+  //       self.haves.push(self.cards[index]);
+  //     }
+  //   }
+  // }
+  //console.log(self.haves);
+//};
 
-    if(self.haves.length === 0){
-      self.haves.push(self.cards[index]);
-    } else {
-      var duplicate = false;
-      self.haves.some(function (value) {
-        var tempId = self.cards[index].id;
-        if (value.id === tempId) {
-          duplicate = true;
-        }
-      });
-      if (duplicate === false) {
-        self.haves.push(self.cards[index]);
+// Add Item to either list
+this.addItem = function(index){
+  var list = self.haves;
+  // See what check box has been checked
+  if($('#haveCheck').prop('checked')){
+  }else{
+     list = self.wants;
+  }
+  if(list.length === 0){
+    list.push(self.cards[index]);
+  }else{
+    var duplicate = false;
+    list.some(function(value){
+      var tempId = self.cards[index].id;
+      if(value.id === tempId){
+        duplicate = true;
       }
+    });
+    if(duplicate === false){
+      list.push(self.cards[index]);
     }
   }
-  //console.log(self.haves);
-};
-// Add cards to a want list
-this.addItemWant = function(index){
-  // First check if the `Want` check box is checked
-  if($('#wantCheck').prop('checked')){
 
-    if(self.wants.length===0){
-      self.wants.push(self.cards[index]);
-    }else{
-      var duplicate = false;
-      self.wants.some(function(value){
-        var tempId = self.cards[index].id;
-        if(value.id === tempId){
-          duplicate = true;
-        }
-      });
-      if(duplicate === false){
-        self.wants.push(self.cards[index]);
-      }
-    }
-   }
-   //console.log(self.wants);
 };
+//
+// // Add cards to a want list
+// this.addItemWant = function(index){
+//   // First check if the `Want` check box is checked
+//   if($('#wantCheck').prop('checked')){
+//
+//     if(self.wants.length===0){
+//       self.wants.push(self.cards[index]);
+//     }else{
+//       var duplicate = false;
+//       self.wants.some(function(value){
+//         var tempId = self.cards[index].id;
+//         if(value.id === tempId){
+//           duplicate = true;
+//         }
+//       });
+//       if(duplicate === false){
+//         self.wants.push(self.cards[index]);
+//       }
+//     }
+//    }
+//    //console.log(self.wants);
+// };
+
 // Only one checkbox `checked` at a time
   $('.checkbox').on('change', function(){
     $('.checkbox').not(this).prop('checked', false);
@@ -119,11 +146,15 @@ this.addItemWant = function(index){
 //   };
 // };
 this.removeItem = function(index){
-  for(var i = 0; i < self.haves.length; i++){
-    if (self.haves[i].id == index){
-      self.haves.splice(i,1);
+
+  var list = self.haves;
+
+  for(var i = 0; i < list.length; i++){
+    if (list[i].id == index){
+      list.splice(i,1);
     }
   }
+
 };
 this.removeItemWant = function(index){
   for(var i = 0; i <self.wants.length; i++){
@@ -132,4 +163,5 @@ this.removeItemWant = function(index){
     }
   }
 };
+
 }]);
