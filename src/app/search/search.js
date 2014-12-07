@@ -19,7 +19,7 @@ angular.module('mtgCentral')
       $.ajax({
         url: "http://api.mtgdb.info/search/" + searchString,
         success: function(data) {
-          console.log(data);
+
           deffered.resolve(data);
         }
       });
@@ -53,10 +53,11 @@ angular.module('mtgCentral')
       });
     });
   };
-
+// Add cards to a Have List
   this.addItem = function(index){
+    // First check if the `Have` check box is checked
     if($('#haveCheck').prop('checked')){
-      console.log('reading right');
+
     if(self.haves.length === 0){
       self.haves.push(self.cards[index]);
     } else {
@@ -72,10 +73,13 @@ angular.module('mtgCentral')
       }
     }
   }
+  //console.log(self.haves);
 };
+// Add cards to a want list
 this.addItemWant = function(index){
+  // First check if the `Want` check box is checked
   if($('#wantCheck').prop('checked')){
-    console.log('anything???');
+
     if(self.wants.length===0){
       self.wants.push(self.cards[index]);
     }else{
@@ -91,13 +95,27 @@ this.addItemWant = function(index){
       }
     }
    }
+   //console.log(self.wants);
 };
+// Only one checkbox `checked` at a time
   $('.checkbox').on('change', function(){
     $('.checkbox').not(this).prop('checked', false);
   });
-  if($('#wantCheck').prop('checked')){
-    console.log('now');
-  }else{
-    console.log('wrong');
-  }
+
+  this.removeItem = function($event){
+    var index = $(event.target).attr('id')
+    for (var i = 0; i < self.haves.length; i++) {
+      if (self.haves[i].id == index) {
+        self.haves.splice(i,1);
+      }
+    }
+  this.removeItemWant = function($event){
+    var index = $(event.target).attr('id')
+    for(var i = 0; i < self.wants.length; i++){
+      if(self.wants[i].id == index){
+        self.wants.splice(i,1);
+      }
+    }
+  };
+  };
 }]);

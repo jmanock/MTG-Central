@@ -31,10 +31,11 @@
         <option>5+</option>
       </select>
       {{have.name}} | {{have.cardSetName}}
-
-      <a href=''ng-click='removeCards($index)' >remove</a>
-    </li>
-  </ul>
+        <a href='' id="{{have.id}}" ng-click="search.removeItem($event)">
+        remove
+          </a>
+        </li>
+      </ul>
 
   <ul id='want'>
     <li ng-repeat='want in search.wants'>
@@ -46,7 +47,9 @@
         <option>5+</option>
       </select>
       {{want.name}} | {{want.cardSetName}}
-      <a href=''> remove</a>
+      <a href='' id="{{want.id}}" ng-click="search.removeItemWant($event)">
+        remove
+      </>
     </li>
   </ul>
 </div>
