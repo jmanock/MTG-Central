@@ -23,13 +23,28 @@
 
   <ul id='have'>
     <li ng-repeat="have in search.haves" >
+      <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5+</option>
+      </select>
       {{have.name}} | {{have.cardSetName}}
+
       <a href=''ng-click='removeCards($index)' >remove</a>
     </li>
   </ul>
 
   <ul id='want'>
     <li ng-repeat='want in search.wants'>
+      <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5+</option>
+      </select>
       {{want.name}} | {{want.cardSetName}}
       <a href=''> remove</a>
     </li>
