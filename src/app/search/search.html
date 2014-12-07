@@ -31,7 +31,7 @@
         <option>5+</option>
       </select>
       {{have.name}} | {{have.cardSetName}}
-        <a href='' id="{{have.id}}" ng-click="search.removeItem($event)">
+        <a href='' ng-click="search.removeItem(have.id)">
         remove
           </a>
         </li>
@@ -47,9 +47,9 @@
         <option>5+</option>
       </select>
       {{want.name}} | {{want.cardSetName}}
-      <a href='' id="{{want.id}}" ng-click="search.removeItemWant($event)">
+      <a href='' ng-click="search.removeItemWant(want.id)">
         remove
-      </>
+      </a>
     </li>
   </ul>
 </div>

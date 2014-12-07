@@ -102,20 +102,34 @@ this.addItemWant = function(index){
     $('.checkbox').not(this).prop('checked', false);
   });
 
-  this.removeItem = function($event){
-    var index = $(event.target).attr('id')
-    for (var i = 0; i < self.haves.length; i++) {
-      if (self.haves[i].id == index) {
-        self.haves.splice(i,1);
-      }
+  // this.removeItem = function($event){
+  //   var index = $(event.target).attr('id')
+  //   for (var i = 0; i < self.haves.length; i++) {
+  //     if (self.haves[i].id == index) {
+  //       self.haves.splice(i,1);
+  //     }
+  //   }
+//   this.removeItemWant = function($event){
+//     var index = $(event.target).attr('id')
+//     for(var i = 0; i < self.wants.length; i++){
+//       if(self.wants[i].id == index){
+//         self.wants.splice(i,1);
+//       }
+//     }
+//   };
+// };
+this.removeItem = function(index){
+  for(var i = 0; i < self.haves.length; i++){
+    if (self.haves[i].id == index){
+      self.haves.splice(i,1);
     }
-  this.removeItemWant = function($event){
-    var index = $(event.target).attr('id')
-    for(var i = 0; i < self.wants.length; i++){
-      if(self.wants[i].id == index){
-        self.wants.splice(i,1);
-      }
+  }
+};
+this.removeItemWant = function(index){
+  for(var i = 0; i <self.wants.length; i++){
+    if(self.wants[i].id == index){
+      self.wants.splice(i,1);
     }
-  };
-  };
+  }
+};
 }]);
