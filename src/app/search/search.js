@@ -53,28 +53,6 @@ angular.module('mtgCentral')
       });
     });
   };
-// Add cards to a Have List
-//  this.addItem = function(index){
-    // First check if the `Have` check box is checked
-  //   if($('#haveCheck').prop('checked')){
-  //     var list = self.haves;
-  //   if(list.length === 0){
-  //     list.push(self.cards[index]);
-  //   } else {
-  //     var duplicate = false;
-  //     list.some(function (value) {
-  //       var tempId = self.cards[index].id;
-  //       if (value.id === tempId) {
-  //         duplicate = true;
-  //       }
-  //     });
-  //     if (duplicate === false) {
-  //       self.haves.push(self.cards[index]);
-  //     }
-  //   }
-  // }
-  //console.log(self.haves);
-//};
 
 // Add Item to either list
 this.addItem = function(index){
@@ -100,51 +78,14 @@ this.addItem = function(index){
   }
 
 };
-//
-// // Add cards to a want list
-// this.addItemWant = function(index){
-//   // First check if the `Want` check box is checked
-//   if($('#wantCheck').prop('checked')){
-//
-//     if(self.wants.length===0){
-//       self.wants.push(self.cards[index]);
-//     }else{
-//       var duplicate = false;
-//       self.wants.some(function(value){
-//         var tempId = self.cards[index].id;
-//         if(value.id === tempId){
-//           duplicate = true;
-//         }
-//       });
-//       if(duplicate === false){
-//         self.wants.push(self.cards[index]);
-//       }
-//     }
-//    }
-//    //console.log(self.wants);
-// };
+
 
 // Only one checkbox `checked` at a time
   $('.checkbox').on('change', function(){
     $('.checkbox').not(this).prop('checked', false);
   });
 
-  // this.removeItem = function($event){
-  //   var index = $(event.target).attr('id')
-  //   for (var i = 0; i < self.haves.length; i++) {
-  //     if (self.haves[i].id == index) {
-  //       self.haves.splice(i,1);
-  //     }
-  //   }
-//   this.removeItemWant = function($event){
-//     var index = $(event.target).attr('id')
-//     for(var i = 0; i < self.wants.length; i++){
-//       if(self.wants[i].id == index){
-//         self.wants.splice(i,1);
-//       }
-//     }
-//   };
-// };
+
 this.removeItem = function(index){
 
   var list = self.haves;

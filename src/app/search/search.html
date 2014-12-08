@@ -22,7 +22,7 @@
   </ul>
 
   <ul id='have'>
-    <li ng-repeat="have in search.haves" >
+    <li ng-repeat="have in search.haves" class='haveList' >
       <select>
         <option>1</option>
         <option>2</option>
@@ -35,11 +35,11 @@
         remove
           </a>
         </li>
-        <button>Save</button>
+        <button type='submit'>Save</button>
       </ul>
 
   <ul id='want'>
-    <li ng-repeat='want in search.wants'>
+    <li ng-repeat='want in search.wants' class='wantList'>
       <select>
         <option>1</option>
         <option>2</option>
@@ -52,6 +52,6 @@
         remove
       </a>
     </li>
-    <button>Save</button>
+    <button type='submit'>Save</button>
   </ul>
 </div>
