@@ -1,0 +1,39 @@
+.ui-autocomplete-loading {
+  background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
+}
+
+#card {
+  width: 25em;
+}
+
+#div-two {
+  margin-top:2em;
+  font-family:Arial
+}
+
+#log {
+  height: 200px;
+  width: 300px;
+  overflow: auto;
+}
+#have{
+  background-color:lightgray;
+  position:fixed;
+  top:5%;
+  right:5%;
+  width:40%;
+  height:45%;
+  list-style-type:none;
+}
+#want{
+  background-color:gray;
+  position:fixed;
+  top:45%;
+  right:5%;
+  width:40%;
+  height:45%;
+  list-style-type:none;
+}
+.checkbox{
+
+}

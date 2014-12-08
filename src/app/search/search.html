@@ -1,69 +1,57 @@
+<div class="col-md-6" ng-controller='SearchCtrl as search'>
+  <!--[if lt IE 10]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
 
-<style>
-.search{
-  background-color:lightgray;
-  width:50%;
-  top:5%;
+  <ul>
+    <input autocomplete="off" type="text" ng-model="searchForm"
+    ng-keyup="search.searchByName()" name="q" id="topsearch"
+    placeholder="Search Cards..." class="field" />
+    Have:<input type='checkbox' class='checkbox'  id='haveCheck'/>
 
-}
-.addWant{
-  background-color:gray;
-  position:fixed;
-  top:5%;
-  right:5%;
-  width:40%;
-  height:45%;
-}
-.addWant p{
-  text-align:center;
-  text-decoration:underline;
-}
-.addWant li{
-  list-style-type:none;
-  color:green;
-  float:right;
-  margin-right:30%;
-}
-select{
-  clear:both;
-}
-</style>
-<div ng-controller='SearchCtrl as search' class='search'>
+    Want:<input type='checkbox'class='checkbox' checked id='wantCheck'/>
+    <li ng-repeat = "card in search.cards | limitTo: 15"
+    style='list-style-type:none'>
+      <p ng-click="search.addItem($index)">
 
-  <div ng-controller='SearchCtrl'>
-    <!--[if lt IE 10]>
-    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <form ng-submit='todoAdd()'>Search:
-      <input type='text' ng-model='searchText' placeholder='Search Cards'>
+        <a href=''>
+        {{card.name}} | {{card.cardSetName}}
+        </a>
+      </p>
+    </li>
+  </ul>
 
-      <br>
-    </form>
-
-    <ul>
-      <li ng-repeat = "set in search.sets  | filter:searchText | orderBy:cardSetName" style='list-style-type:none'>
-        {{set.name}} | {{set.cardSetName}} </li>
+  <ul id='have'>
+    <li ng-repeat="have in search.haves" class='haveList' >
+      <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5+</option>
+      </select>
+      {{have.name}} | {{have.cardSetName}}
+        <a href='' ng-click="search.removeItem(have.id)">
+        remove
+          </a>
+        </li>
+        <button type='submit'>Save</button>
       </ul>
-      <div class='addWant'>
 
-        <p>Have Cards</p>
-
-        <ul>
-          <select>
-            <option value='1'>1</option>
-            <option value='2'>2</option>
-            <option value='3'>3</option>
-            <option value='4'>4</option>
-            <option value='5+'>5+</option>
-          </select>
-          <li>Guardian Angel | Limited Edition Alpha</li>
-
-        </ul>
-      </div>
-      <li ng-repeat = "set in sets  | filter:searchText | orderBy:cardSetName"
-      style='list-style-type:none'>
-      {{set.name}} | {{set.cardSetName}} </li>
-    </ul>
-
-  </div>
-  
+  <ul id='want'>
+    <li ng-repeat='want in search.wants' class='wantList'>
+      <select>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5+</option>
+      </select>
+      {{want.name}} | {{want.cardSetName}}
+      <a href='' ng-click="search.removeItemWant(want.id)">
+        remove
+      </a>
+    </li>
+    <button type='submit'>Save</button>
+  </ul>
+</div>
