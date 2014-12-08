@@ -57,7 +57,7 @@ angular.module('mtgCentral')
 // Add Item to either list
 this.addItem = function(index){
   var list = self.haves;
-  // See what check box has been checked
+  // See what radio button has been checked
   if($('#haveCheck').prop('checked')){
   }else{
      list = self.wants;
@@ -79,13 +79,7 @@ this.addItem = function(index){
 
 };
 
-
-// Only one checkbox `checked` at a time
-  $('.checkbox').on('change', function(){
-    $('.checkbox').not(this).prop('checked', false);
-  });
-
-
+// Remove Cards from `have` list
 this.removeItem = function(index){
 
   var list = self.haves;
@@ -97,6 +91,8 @@ this.removeItem = function(index){
   }
 
 };
+
+// Remove Cards from `want` list
 this.removeItemWant = function(index){
   for(var i = 0; i <self.wants.length; i++){
     if(self.wants[i].id == index){

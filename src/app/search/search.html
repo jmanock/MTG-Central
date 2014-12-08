@@ -7,9 +7,9 @@
     <input autocomplete="off" type="text" ng-model="searchForm"
     ng-keyup="search.searchByName()" name="q" id="topsearch"
     placeholder="Search Cards..." class="field" />
-    Have:<input type='checkbox' class='checkbox'  id='haveCheck'/>
+    Have:<input type='radio' name='hW' value='Have' checked id='haveCheck'>
 
-    Want:<input type='checkbox'class='checkbox' checked id='wantCheck'/>
+    Want:<input type='radio'name='hW' value='Want' >
     <li ng-repeat = "card in search.cards | limitTo: 15"
     style='list-style-type:none'>
       <p ng-click="search.addItem($index)">
