@@ -7,6 +7,7 @@
     <input autocomplete="off" type="text" ng-model="searchForm"
     ng-keyup="search.searchByName()" name="q" id="topsearch"
     placeholder="Search Cards..." class="field"  />
+
     Have:<input type='radio' name='hW' value='Have' checked id='haveCheck'>
 
     Want:<input type='radio'name='hW' value='Want' >
@@ -19,39 +20,30 @@
         </a>
       </p>
     </li>
+    <button id="save" ng-click="search.pushCards(app.user.uid)">Save</button>
+    <!-- <button ng-click="search.pullCards(app.user.facebook.have)">Pull Have</button>
+    <button ng-click='search.pullCards(app.user.facebook.wants)'>Pull Wants</button> -->
   </ul>
 
   <ul id='have'>
     <li ng-repeat="have in search.haves" class='haveList' >
-      <select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5+</option>
-      </select>
+      <input  type="number" name="quantity" min="1" max="5">
+
       {{have.name}} | {{have.cardSetName}}
         <a href='' ng-click="search.removeItemHave(have.id)">
         remove
           </a>
         </li>
-        <button type='submit'>Save</button>
       </ul>
 
   <ul id='want'>
     <li ng-repeat='want in search.wants' class='wantList'>
-      <select>
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5+</option>
-      </select>
+      <input  type="number" name="quantity" min="1" max="5">
+
       {{want.name}} | {{want.cardSetName}}
       <a href='' ng-click="search.removeItemWant(want.id)">
         remove
       </a>
     </li>
-    <button type='submit'>Save</button>
   </ul>
 </div>

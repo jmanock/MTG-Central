@@ -24,6 +24,7 @@
   width:40%;
   height:45%;
   list-style-type:none;
+  overflow:scroll;
 }
 #want{
   background-color:gray;
@@ -33,6 +34,7 @@
   width:40%;
   height:45%;
   list-style-type:none;
+  overflow:scroll;
 }
 .checkbox{
 
