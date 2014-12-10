@@ -1,49 +1,34 @@
-<div class="col-md-6" ng-controller='SearchCtrl as search'>
+<div class="col-md-10 search-cont" ng-controller='SearchCtrl as search'>
   <!--[if lt IE 10]>
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
 
-  <ul>
-    <input autocomplete="off" type="text" ng-model="searchForm"
-    ng-keyup="search.searchByName()" name="q" id="topsearch"
-    placeholder="Search Cards..." class="field"  />
+  <ul id="search">
+    <input autocomplete="off" type="text" ng-model="searchForm" ng-keyup="search.searchByName()" name="q"
+    id="topsearch" placeholder="Search..." class="field"  autofocus='autofocus'/>
 
-    Have:<input type='radio' name='hW' value='Have' checked id='haveCheck'>
-
-    Want:<input type='radio'name='hW' value='Want' >
-    <li ng-repeat = "card in search.cards | limitTo: 15"
-    style='list-style-type:none'>
-      <p ng-click="search.addItem($index)">
-
-        <a href=''>
-        {{card.name}} | {{card.cardSetName}}
-        </a>
+    <li ng-repeat = "card in search.cards | limitTo: 10" style="list-style-type:none">
+      <p ng-click="search.addItemHave(search.cards[$index])">
+        <a href="">{{card.name}} | {{card.cardSetName}} </a>
+        <button ng-click='search.addItemHave(search.cards[$index])'>Add Haves  </button>
+        <button ng-click='search.addItemWant(search.cards[$index])'>Add Wants</button>
       </p>
     </li>
-    <button id="save" ng-click="search.pushCards(app.user.uid)">Save</button>
-    <!-- <button ng-click="search.pullCards(app.user.facebook.have)">Pull Have</button>
-    <button ng-click='search.pullCards(app.user.facebook.wants)'>Pull Wants</button> -->
   </ul>
 
-  <ul id='have'>
-    <li ng-repeat="have in search.haves" class='haveList' >
-      <input  type="number" name="quantity" min="1" max="5">
+  <ul id="have">
+    <li ng-repeat="(id, have) in search.haves" >
 
       {{have.name}} | {{have.cardSetName}}
-        <a href='' ng-click="search.removeItemHave(have.id)">
-        remove
-          </a>
-        </li>
-      </ul>
+      <button ng-click="search.removeItemHave(id)"> Remove </button>
+    </li>
+  </ul>
 
-  <ul id='want'>
-    <li ng-repeat='want in search.wants' class='wantList'>
-      <input  type="number" name="quantity" min="1" max="5">
+  <ul id="want">
+    <li ng-repeat="(id, want) in search.wants" >
 
       {{want.name}} | {{want.cardSetName}}
-      <a href='' ng-click="search.removeItemWant(want.id)">
-        remove
-      </a>
+      <button ng-click="search.removeItemWant(id)"> Remove </button>
     </li>
   </ul>
 </div>
