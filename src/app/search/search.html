@@ -18,18 +18,20 @@
   </ul>
 
   <ul id="have">
+    <h3>Haves</h3>
     <li ng-repeat="(id, have) in search.haves" >
 
       {{have.name}} | {{have.cardSetName}}
-      <button ng-click="search.removeItemHave(id)"> Remove </button>
+      <a ng-click="search.removeItemHave(id)"> Remove </a>
     </li>
   </ul>
 
   <ul id="want">
+    <h3>Wants</h3>
     <li ng-repeat="(id, want) in search.wants" >
 
       {{want.name}} | {{want.cardSetName}}
-      <button ng-click="search.removeItemWant(id)"> Remove </button>
+      <a ng-click="search.removeItemWant(id)"> Remove </a>
     </li>
   </ul>
 </div>
