@@ -1,104 +1,92 @@
-
 'use strict';
 
 angular.module('mtgCentral')
 
-.factory('cards', ['$firebase', function($firebase){
-  var ref = new Firebase('https://mtg-central.firebaseio.com/cards')
-  //.limitToFirst(10000);
-  return $firebase(ref).$asArray();
-}])
-
-.factory('SearchSvc', ['$q', function($q){
+.factory('SearchSvc', function($q, $http){
   function SearchSvc() {}
   SearchSvc.prototype.searchByName = function(searchString) {
-    var deffered = $q.defer();
-    if (searchString.length >= 3) {
-      // Figure out the best way to add a delay
-
-      $.ajax({
-        url: "http://api.mtgdb.info/search/" + searchString,
-        success: function(data) {
-
-          deffered.resolve(data);
-        }
-      });
-    }
-
-    return deffered.promise;
-
+    // TODO: Figure out the best way to add a delay
+    return $http.get('http://api.mtgdb.info/search/' + searchString);
   };
   return (SearchSvc);
-}])
+})
 
-.controller('SearchCtrl', ['cards', 'SearchSvc', '$scope', function(cards, SearchSvc, $scope){
+
+.controller('SearchCtrl',
+function(Auth, SearchSvc, FirebaseUrl, $scope, $firebase){
   var self = this;
 
   var searchSvc = new SearchSvc();
 
-  this.sets = cards;
-  this.haves = [];
-  this.wants = [];
-  //var badSets = ['badSet'];
+  Auth.onAuth(function(user){
+    self.user = user;
+  });
 
-  this.cards = [];
+  self.user.$loaded(function(){
+    self.haves = $firebase(FirebaseUrl.child('usercards').child(self.user.uid).child('have')).$asObject();
+    self.wants = $firebase(FirebaseUrl.child('usercards').child(self.user.uid).child('want')).$asObject();
+  });
 
   this.searchByName = function(){
     self.cards = [];
-    searchSvc.searchByName($scope.searchForm).then(function(data){
-      data.forEach(function(card){
-        // Create an object of known online only sets and compare the set name
-        // To the object and remove those results
-        self.cards.push(card);
+    if ($scope.searchForm.length >= 3) {
+      searchSvc.searchByName($scope.searchForm).success(function(data){
+        self.cards = data;
       });
+    }
+  };
+
+  this.addItemHave = function(card){
+    var cardUsers = FirebaseUrl.child('cardusers').child(card.id).child('have').child(self.user.uid);
+    var userCards = FirebaseUrl.child('usercards').child(self.user.uid).child('have').child(card.id);
+
+    // Update the authdUser's information in Firebase
+    cardUsers.update({
+      cond: 'NM',
+      qty: 1
+    });
+
+    userCards.update({
+      name: card.name,
+      cardSetName: card.cardSetName,
+      cond: 'NM',
+      qty: 1
     });
   };
 
-// Add Item to either list
-this.addItem = function(index){
-  var list = self.haves;
-  // See what radio button has been checked
-  if($('#haveCheck').prop('checked')){
-  }else{
-     list = self.wants;
-  }
-  if(list.length === 0){
-    list.push(self.cards[index]);
-  }else{
-    var duplicate = false;
-    list.some(function(value){
-      var tempId = self.cards[index].id;
-      if(value.id === tempId){
-        duplicate = true;
-      }
+  this.addItemWant = function(card){
+    var cardUsers = FirebaseUrl.child('cardusers').child(card.id).child('want').child(self.user.uid);
+    var userCards = FirebaseUrl.child('usercards').child(self.user.uid).child('want').child(card.id);
+
+    // Update the authdUser's information in Firebase
+    cardUsers.update({
+      cond: 'NM',
+      qty: 1
     });
-    if(duplicate === false){
-      list.push(self.cards[index]);
-    }
-  }
 
-};
+    userCards.update({
+      name: card.name,
+      cardSetName: card.cardSetName,
+      cond: 'NM',
+      qty: 1
+    });
+  };
 
-// Remove Cards from `have` list
-this.removeItem = function(index){
 
-  var list = self.haves;
 
-  for(var i = 0; i < list.length; i++){
-    if (list[i].id == index){
-      list.splice(i,1);
-    }
-  }
+  this.removeItemHave = function(id){
+    var cardUsers = FirebaseUrl.child('cardusers').child(id).child('have').child(self.user.uid);
+    var userCards = FirebaseUrl.child('usercards').child(self.user.uid).child('have').child(id);
 
-};
+    cardUsers.remove();
+    userCards.remove();
+  };
 
-// Remove Cards from `want` list
-this.removeItemWant = function(index){
-  for(var i = 0; i <self.wants.length; i++){
-    if(self.wants[i].id == index){
-      self.wants.splice(i,1);
-    }
-  }
-};
+  this.removeItemWant = function(id){
+    var cardUsers = FirebaseUrl.child('cardusers').child(id).child('want').child(self.user.uid);
+    var userCards = FirebaseUrl.child('usercards').child(self.user.uid).child('want').child(id);
 
-}]);
+    cardUsers.remove();
+    userCards.remove();
+  };
+});
