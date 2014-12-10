@@ -1,7 +1,9 @@
 .ui-autocomplete-loading {
   background: white url("images/ui-anim_basic_16x16.gif") right center no-repeat;
 }
-
+body{
+  background-color:rgb(30,30,30);
+}
 #card {
   width: 25em;
 }
@@ -17,7 +19,7 @@
   overflow: auto;
 }
 #have{
-  background-color:lightgray;
+  background-color:rgb(221,221,221);
   position:fixed;
   top:5%;
   right:5%;
@@ -27,15 +29,21 @@
   overflow:scroll;
 }
 #want{
-  background-color:gray;
+  background-color:rgb(240,240,240);
   position:fixed;
-  top:45%;
+  top:55%;
   right:5%;
   width:40%;
   height:45%;
   list-style-type:none;
   overflow:scroll;
 }
-.checkbox{
-
+.list-group-item{
+  width:45%;
+}
+.list-group-item:nth-child(odd){
+  background-color:rgb(234,234,234);
+}
+.list-group-item:nth-child(even){
+  background-color:rgb(221,221,221);
 }
