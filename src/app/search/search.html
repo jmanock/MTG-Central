@@ -8,11 +8,11 @@
     id="topsearch" placeholder="Search..." class="field"  autofocus='autofocus'/>
 
     <li ng-repeat = "card in search.cards | limitTo: 10" style="list-style-type:none">
-      <p ng-click="search.addItemHave(search.cards[$index])">
-        <a href="">{{card.name}} | {{card.cardSetName}} </a>
+
+        <h4>{{card.name}} | {{card.cardSetName}} </h4>
         <button ng-click='search.addItemHave(search.cards[$index])'>Add Haves  </button>
         <button ng-click='search.addItemWant(search.cards[$index])'>Add Wants</button>
-      </p>
+
     </li>
   </ul>
 
