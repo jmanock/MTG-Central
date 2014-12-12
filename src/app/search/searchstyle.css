@@ -1,0 +1,62 @@
+body{
+  background-color:rgb(34,34,34);
+}
+#card {
+  width: 25em;
+}
+
+#search {
+  margin-top: 8pt;
+}
+
+#div-two {
+  margin-top:2em;
+  font-family:Arial
+}
+
+#log {
+  height: 200px;
+  width: 300px;
+  overflow: auto;
+}
+#have{
+  background-color:black;
+  position:fixed;
+  top:5%;
+  right:5%;
+  width:40%;
+  height:45%;
+  list-style-type:none;
+  overflow:scroll;
+  color:darkgray;
+  border:1px solid white;
+  line-height:30px;
+}
+#want{
+  border:1px solid white;
+  background-color:rgb(50,50,50);
+  position:fixed;
+  top:55%;
+  right:5%;
+  width:40%;
+  height:45%;
+  list-style-type:none;
+  overflow:scroll;
+  color:darkgray;
+  line-height:30px;
+}
+.list-group-item{
+  width:45%;
+}
+.list-group-item:nth-child(odd){
+  background-color:black;
+  color:darkgray;
+}
+.list-group-item:nth-child(even){
+  background-color:rgb(50,50,50);
+  color:darkgray;
+}
+button{
+  background-color:darkgray;
+  color:black;
+}
